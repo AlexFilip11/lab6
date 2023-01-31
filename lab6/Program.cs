@@ -19,9 +19,18 @@ namespace lab6
             // Scrieti o metoda care va calcula volumul dulapului pe baza celor trei campuri.
             //Instantiati un dulap in functia Main, apelati metoda de calcul a volumului si afisati rezultatul.
             Dulap dulap = new Dulap();
-            dulap.CitesteDulap(dulap);
-            dulap.AfisareDulap(dulap);
+            CitesteDulap(dulap);
+            dulap.AfisareDulap();
             Console.WriteLine($"Volumul dulapului este {CalzuleazaVolumDulap(dulap)}");
+        }
+        static void CitesteDulap(Dulap myDulap)
+        {
+            Console.WriteLine("Lungime: ");
+            myDulap.SetLungime(int.Parse(Console.ReadLine()));
+            Console.WriteLine("Latime: ");
+            myDulap.SetLatime(int.Parse(Console.ReadLine()));
+            Console.WriteLine("Inaltime: ");
+            myDulap.SetInaltime(int.Parse(Console.ReadLine()));
         }
 
         static int CalzuleazaVolumDulap(Dulap myDulap)
@@ -40,11 +49,20 @@ namespace lab6
             //Folositi: clase, campuri, metode, modificatorii de acces adecvati, comentarii xml pentru metodele publice.
             //Creeati doua obiecte de tipul autoturism in functia “Main” si apelati-le metodele “Tipareste”
             Autoturism masina = new Autoturism();
-            masina.CitesteAuto(masina);
-            masina.AfisareAutoturism(masina);
+            CitesteAuto(masina);
+            masina.AfisareAutoturism();
             Autoturism autobus = new Autoturism();
-            autobus.CitesteAuto(autobus);
-            autobus.AfisareAutoturism(autobus);
+            CitesteAuto(autobus);
+            autobus.AfisareAutoturism();
+        }
+        static void CitesteAuto(Autoturism myAuto)
+        {
+            Console.WriteLine("Marca: ");
+            myAuto.marca = Console.ReadLine();
+            Console.WriteLine("Numarul de inmatriculare: ");
+            myAuto.nrInmatriculare = Console.ReadLine();
+            Console.WriteLine("Capacitatea cilindrica: ");
+            myAuto.SetCapacitateaCilindrica(int.Parse(Console.ReadLine()));
         }
     }
 }

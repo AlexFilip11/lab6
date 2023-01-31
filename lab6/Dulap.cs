@@ -11,11 +11,11 @@ namespace lab6
         private int latime;
         private int inaltime;
         
-        public void AfisareDulap(Dulap myDulap)
+        public void AfisareDulap()
         {
             Console.WriteLine( $"Dulapul are lungimea de {lungime}cm, latimea de {latime}cm si inaltimea de {inaltime}cm");
         }
-        public void CitesteDulap(Dulap myDulap)
+        /*public void CitesteDulap(Dulap myDulap)
         {
             Console.WriteLine("Lungime: ");
             lungime = int.Parse(Console.ReadLine());
@@ -23,6 +23,18 @@ namespace lab6
             latime = int.Parse(Console.ReadLine());
             Console.WriteLine("Inaltime: ");
             inaltime = int.Parse(Console.ReadLine());
+        }*/
+        public void SetLungime(int newLungime)
+        {
+            lungime = newLungime;
+        }
+        public void SetLatime(int newLatime)
+        {
+            latime = newLatime;
+        }
+        public void SetInaltime(int newInaltime)
+        {
+            inaltime = newInaltime;
         }
         public int GetLungime()
         {
@@ -42,11 +54,16 @@ namespace lab6
         public string marca;
         public string nrInmatriculare;
         private int capacitateCilindrica;
-        public void AfisareAutoturism(Autoturism myAuto)
+        public void AfisareAutoturism()
         {
             Console.WriteLine($"Autoturismul este marca {marca} cu numarul de inmatriculare {nrInmatriculare} si capacitatea cilindrica de {capacitateCilindrica}");
         }
-        public void CitesteAuto(Autoturism myAuto)
+        public void SetCapacitateaCilindrica(int newCapacitate)
+        {
+            capacitateCilindrica = newCapacitate;
+        }
+
+        /*public void CitesteAuto(Autoturism myAuto)
         {
             Console.WriteLine("Marca: ");
             marca = Console.ReadLine();
@@ -54,7 +71,7 @@ namespace lab6
             nrInmatriculare = Console.ReadLine();
             Console.WriteLine("Capacitatea cilindrica: ");
             capacitateCilindrica = int.Parse(Console.ReadLine());
-        }
+        }*/
         public int GetCapacitateaCilindrica()
         {
             return capacitateCilindrica;
